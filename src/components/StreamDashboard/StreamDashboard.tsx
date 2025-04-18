@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Player from '../Player';
+
 import {
   Sidebar,
   SidebarContent,
@@ -23,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+
 import {
   Chart,
   ChartContainer,
@@ -236,6 +239,15 @@ const StreamDashboard = () => {
           </CardContent>
         </Card>
 
+        <Card className="mt-4">
+          <CardHeader>
+            <CardTitle>Stream Preview</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Player rtmpKey={rtmpKey} />
+          </CardContent>
+        </Card>
+
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
           <Card>
             <CardHeader>
@@ -379,10 +391,9 @@ const StreamDashboard = () => {
           </CardContent>
         </Card>
       </div>
-      <Toaster/>
+      <Toaster />
     </SidebarProvider>
   );
 };
 
 export default StreamDashboard;
-

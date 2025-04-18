@@ -1,4 +1,4 @@
-import StreamDashboard from '@/components/StreamDashboard';
+import StreamDashboard from '@/components/StreamDashboard/StreamDashboard';
 
 export default function Home() {
   return (
